@@ -1,0 +1,232 @@
+/* Two intentionally divergent concepts. Loaded only by options 04 and 05. */
+:is(.editorial, .noticeboard) .review-options { flex-wrap: wrap; justify-content: center; }
+:is(.editorial, .noticeboard) .hero { width: min(1240px, calc(100% - 48px)); }
+
+/* 04 — Courtside magazine: typography first, photography second, almost no cards. */
+.editorial {
+  --paper: #fbfaf7;
+  --ink: #242426;
+  --green: #b83324;
+  --green-dark: #242426;
+  --clay: #b83324;
+  --line: #c9c7c1;
+  --muted: #5c5b58;
+  --navy: #242426;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+.editorial .site-header { border-bottom: 2px solid #242426; }
+.editorial .brand { color: #242426; }
+.editorial .hero { display: block; padding: 26px 0 0; }
+.edition-line { display: flex; justify-content: space-between; gap: 20px; padding-bottom: 20px; font: 11px/1.5 ui-monospace, monospace; letter-spacing: .07em; text-transform: uppercase; }
+.edition-line span:first-child::before { content: ''; display: inline-block; width: 9px; height: 9px; background: #b83324; margin-right: 10px; border-radius: 50%; }
+.editorial .hero-copy { display: grid; grid-template-columns: 1.45fr 1fr; max-width: none; gap: 56px; align-items: center; padding: 22px 0 44px; }
+.editorial h1 { font-size: clamp(64px, 9.5vw, 142px); font-weight: 800; letter-spacing: -.075em; line-height: .88; margin: 0; }
+.editorial h1 em { font-family: Georgia, 'Times New Roman', serif; font-weight: 400; color: #b83324; letter-spacing: -.075em; line-height: 1.1; }
+.editorial .hero .eyebrow { font-size: 10px; letter-spacing: .1em; }
+.editorial .hero .intro { font-size: 16px; line-height: 1.65; }
+.editorial .hero .actions { gap: 8px; margin-top: 24px; }
+.editorial .hero .button { padding: 13px 17px; font-size: 12px; }
+.editorial .button.primary { background: #b83324; }
+.editorial .button.secondary { border-color: #242426; }
+.editorial .hero-media { box-shadow: none; background: transparent; border-radius: 0; }
+.editorial .hero-media img { width: 100%; height: 335px; aspect-ratio: auto; object-position: center 64%; }
+.editorial .hero-media figcaption { display: flex; justify-content: space-between; gap: 20px; padding: 13px 0; font: 10px/1.5 ui-monospace, monospace; color: #5c5b58; text-transform: uppercase; }
+.editorial .quick-facts { width: min(1240px, calc(100% - 48px)); margin-top: 12px; background: transparent; border: 0; border-top: 2px solid #242426; border-bottom: 1px solid #242426; gap: 0; }
+.editorial .quick-facts div { background: transparent; padding: 22px 20px; border-right: 1px solid var(--line); }
+.editorial .quick-facts div:first-child { padding-left: 0; }
+.editorial .quick-facts div:last-child { border: 0; }
+.editorial .quick-facts strong { font-family: Georgia, serif; font-weight: 400; font-size: 27px; }
+.editorial h2 { font-family: Georgia, serif; font-weight: 400; font-size: clamp(32px, 3.6vw, 51px); letter-spacing: -.05em; }
+.editorial :is(.split-section, .services-section, .coaching-section, .fees-section, .gallery-section, .newsletters-section) { border-top: 2px solid #242426; margin-top: 38px; padding-top: 38px; padding-bottom: 35px; }
+.editorial .location-panel { border: 0; background: transparent; padding: 0 0 0 30px; border-left: 1px solid var(--line); }
+.editorial .location-panel dt { font-family: ui-monospace, monospace; font-size: 11px; letter-spacing: .04em; }
+.editorial .location-panel dd { font-size: 16px; line-height: 1.7; }
+.editorial .services-section { display: grid; grid-template-columns: 1fr 1.7fr; gap: 55px; align-items: start; }
+.editorial .service-list { display: block; counter-reset: activities; }
+.editorial .service-list a { display: grid; grid-template-columns: 35px 1fr 24px; gap: 4px 18px; counter-increment: activities; padding: 25px 0; min-height: 0; border: 0; border-bottom: 1px solid #c9c7c1; background: transparent; }
+.editorial .service-list a:first-child { padding-top: 0; }
+.editorial .service-list a::before { content: '0' counter(activities); grid-column: 1; grid-row: 1 / 3; font: 12px ui-monospace, monospace; color: #b83324; padding-top: 7px; }
+.editorial .service-list span { grid-column: 2; grid-row: 1; margin: 0 0 8px; font-size: 25px; }
+.editorial .service-list strong { grid-column: 2; grid-row: 2; color: #5c5b58; font-size: 15px; }
+.editorial .service-list a::after { grid-column: 3; grid-row: 1; margin: 0; }
+.editorial .service-list a:hover { box-shadow: none; background: #f0eee8; }
+.editorial .coach-grid { gap: 36px; }
+.editorial .coach-card { padding: 24px 0; background: transparent; border: 0; border-top: 1px solid var(--line); }
+.editorial .coach-card h3 { font-family: Georgia, serif; font-weight: 400; font-size: 29px; }
+.editorial .junior-panel { background: #eee9e1; border: 0; padding: 28px; }
+.editorial .table-card { border: 0; border-top: 2px solid #242426; background: transparent; }
+.editorial th { background: transparent; color: #242426; font: 12px ui-monospace, monospace; border-bottom: 2px solid #242426; }
+.editorial .fee-grid { gap: 0 35px; }
+.editorial .fee-card { min-height: 0; background: transparent; padding: 25px 0; border: 0; border-top: 1px solid #242426; }
+.editorial .fee-card .price { font-family: Georgia, serif; font-weight: 400; font-size: 49px; }
+.editorial .gallery-grid { grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 26px; }
+.editorial .gallery-grid figure { grid-column: span 2; background: transparent; }
+.editorial .gallery-grid figure:nth-child(1) { grid-column: span 4; }
+.editorial .gallery-grid figure:nth-child(2) { grid-column: span 2; }
+.editorial .gallery-grid figure:nth-child(-n+2) img { height: 310px; }
+.editorial .gallery-grid figcaption { background: transparent; padding-left: 0; font-family: Georgia, serif; }
+.editorial .newsletter-simple-card { border: 0; padding: 30px 0; border-top: 1px solid #242426; border-bottom: 1px solid #242426; background: transparent; }
+.editorial .newsletter-simple-card strong { font-family: Georgia, serif; font-weight: 400; font-size: 38px; }
+.editorial .sponsor-card, .editorial .venue-card { background: transparent; border: 0; }
+.editorial .contact-section { background: #242426; }
+
+/* 05 — Clubhouse noticeboard: a graphic poster wall, not a conventional club brochure. */
+.noticeboard {
+  --paper: #eeebfb;
+  --ink: #263794;
+  --green: #293fac;
+  --green-dark: #24358f;
+  --clay: #3446a0;
+  --line: #b7b5dc;
+  --muted: #45456c;
+  --navy: #24358f;
+  font-family: 'Trebuchet MS', Arial, sans-serif;
+}
+.noticeboard .site-header { background: #eeebfb; border-bottom: 2px solid #293fac; }
+.noticeboard .hero { position: relative; display: grid; grid-template-columns: 1fr 1.15fr; grid-template-rows: auto 390px 250px auto; gap: 18px; padding: 24px 0 36px; }
+.noticeboard-heading { grid-column: 1 / -1; display: flex; justify-content: space-between; gap: 20px; font-size: 12px; font-weight: 700; padding-bottom: 6px; }
+.noticeboard .hero-copy { grid-column: 2; grid-row: 2 / 4; max-width: none; padding: 38px 42px 32px; background: #f3ff9f; border: 2px solid #293fac; box-shadow: 7px 7px 0 #293fac; }
+.noticeboard h1 { font-size: clamp(64px, 6.5vw, 98px); font-weight: 900; letter-spacing: -.065em; line-height: .88; margin-bottom: 22px; }
+.noticeboard h1 em { font-family: Georgia, serif; font-weight: 400; }
+.noticeboard .hero .eyebrow { font-size: 11px; letter-spacing: .14em; margin-bottom: 16px; }
+.noticeboard .hero .intro { font-size: 15px; line-height: 1.5; color: #343f74; margin-bottom: 0; }
+.noticeboard .hero .actions { gap: 10px; margin-top: 20px; }
+.noticeboard .hero .button { padding: 12px 17px; font-size: 12px; gap: 14px; }
+.noticeboard .button { border-radius: 0; border-width: 2px; }
+.noticeboard .button.primary { background: #293fac; }
+.noticeboard .button.secondary { color: #24358f; border-color: #293fac; }
+.noticeboard .hero-media { grid-column: 1; grid-row: 2; position: relative; border: 2px solid #293fac; border-radius: 0; box-shadow: none; overflow: visible; background: white; margin: 0 10px 0 0; transform: rotate(-2deg); }
+.noticeboard .hero-media img { height: 100%; width: 100%; aspect-ratio: auto; object-position: center 58%; }
+.noticeboard .hero-media figcaption { position: absolute; bottom: 16px; left: 16px; padding: 9px 16px; background: #fffdf6; color: #24358f; font: italic 23px Georgia, serif; transform: rotate(-3deg); box-shadow: 3px 3px 0 #293fac; }
+.club-stamp { position: absolute; z-index: 1; left: 14px; top: 515px; width: 150px; height: 150px; display: flex; flex-direction: column; justify-content: center; text-align: center; color: #24358f; background: #ffad91; border: 2px solid #293fac; border-radius: 50%; transform: rotate(-12deg); font-size: 17px; line-height: 1.2; }
+.club-stamp strong { margin-top: 5px; }
+.noticeboard-social { grid-column: 1; grid-row: 3; justify-self: end; width: 64%; height: 100%; padding: 7px 7px 0; background: #fffdf6; border: 2px solid #293fac; margin: 0 13px 0 0; transform: rotate(3deg); }
+.noticeboard-social img { width: 100%; height: calc(100% - 34px); object-fit: cover; display: block; }
+.noticeboard-social figcaption { padding: 6px 4px; font: italic 17px Georgia, serif; text-align: center; }
+.noticeboard-shortcuts { grid-column: 1 / -1; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; margin-top: 16px; }
+.noticeboard-shortcuts a { display: block; padding: 18px 22px; border: 2px solid #293fac; color: #24358f; text-decoration: none; background: #fffdf6; box-shadow: 4px 4px 0 #293fac; }
+.noticeboard-shortcuts a:nth-child(2) { background: #ffad91; }
+.noticeboard-shortcuts a:nth-child(3) { background: #d6d5fc; }
+.noticeboard-shortcuts a span { display: block; text-transform: uppercase; letter-spacing: .08em; font-size: 10px; margin-bottom: 6px; }
+.noticeboard-shortcuts a strong { font-size: 21px; letter-spacing: -.025em; }
+.noticeboard-shortcuts a:hover { box-shadow: 1px 1px 0 #293fac; }
+.noticeboard .quick-facts { width: min(1240px, calc(100% - 48px)); background: #293fac; border: 0; gap: 0; }
+.noticeboard .quick-facts div { background: transparent; border-right: 1px solid #7685d9; }
+.noticeboard .quick-facts div:last-child { border: 0; }
+.noticeboard .quick-facts strong { color: #f3ff9f; font-size: 26px; }
+.noticeboard .quick-facts span { color: white; }
+.noticeboard h2 { font-size: clamp(34px, 3.7vw, 53px); font-weight: 850; line-height: 1.02; letter-spacing: -.055em; }
+.noticeboard .location-panel { background: #fffdf6; border: 2px solid #293fac; box-shadow: 6px 6px 0 #bcbcf0; }
+.noticeboard .service-list { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+.noticeboard .service-list a { background: #f3ff9f; border: 2px solid #293fac; box-shadow: 5px 5px 0 #293fac; padding: 28px; }
+.noticeboard .service-list a:nth-child(3n+2) { background: #ffad91; }
+.noticeboard .service-list a:nth-child(3n+3) { background: #d6d5fc; }
+.noticeboard .service-list span { font-size: 28px; line-height: 1.1; font-weight: 850; }
+.noticeboard .service-list strong { font-size: 15px; }
+.noticeboard .service-list a:hover { box-shadow: 2px 2px 0 #293fac; }
+.noticeboard .coaching-section { border: 2px solid #293fac; background: #d6d5fc; padding: 42px; margin-top: 20px; margin-bottom: 35px; }
+.noticeboard .coach-card { background: #fffdf6; border: 2px solid #293fac; }
+.noticeboard .coach-card h3 { font-weight: 800; font-size: 27px; }
+.noticeboard .junior-panel { border: 2px solid #293fac; background: #f3ff9f; }
+.noticeboard .table-card { border: 2px solid #293fac; background: #fffdf6; }
+.noticeboard th { background: #293fac; }
+.noticeboard .fee-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+.noticeboard .fee-card { background: #fffdf6; border: 2px solid #293fac; box-shadow: 4px 4px 0 #bcbcf0; }
+.noticeboard .fee-card:nth-child(-n+3) { background: #f3ff9f; }
+.noticeboard .fee-card .price { font-size: 48px; }
+.noticeboard .gallery-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 30px; padding: 10px; }
+.noticeboard .gallery-grid figure { border: 2px solid #293fac; background: #fffdf6; padding: 7px; box-shadow: 5px 5px 0 #bcbcf0; transform: rotate(-2deg); }
+.noticeboard .gallery-grid figure:nth-child(even) { transform: rotate(2deg); }
+.noticeboard .gallery-grid figcaption { background: #fffdf6; font-family: Georgia, serif; font-style: italic; color: #24358f; }
+.noticeboard .newsletter-simple-card { background: #ffad91; border: 2px solid #293fac; box-shadow: 6px 6px 0 #293fac; }
+.noticeboard .newsletter-simple-card strong { font-size: 34px; }
+.noticeboard .sponsor-card, .noticeboard .venue-card { background: #fffdf6; border: 2px solid #293fac; }
+.noticeboard .contact-section { background: #293fac; border: 2px solid #293fac; box-shadow: 7px 7px 0 #bcbcf0; }
+
+@media (max-width: 1100px) {
+  .noticeboard .hero-copy { padding: 30px; }
+  .noticeboard h1 { font-size: 76px; }
+  .noticeboard .hero .intro { font-size: 14px; }
+  .noticeboard .hero .button { padding: 11px; font-size: 11px; gap: 8px; }
+  .noticeboard-shortcuts a { padding: 16px; }
+  .noticeboard-shortcuts a strong { font-size: 17px; }
+  .club-stamp { width: 125px; height: 125px; font-size: 15px; }
+}
+@media (max-width: 900px) {
+  .editorial .hero-copy { gap: 28px; grid-template-columns: 1.2fr 1fr; }
+  .editorial .hero .intro { font-size: 14px; }
+  .editorial .hero .actions { margin-top: 16px; }
+  .editorial .hero .button { padding: 10px 12px; min-height: 42px; }
+  .editorial .hero-media img { height: 300px; }
+  .editorial .services-section { gap: 28px; grid-template-columns: 1fr 1.4fr; }
+  .editorial .service-list span { font-size: 22px; }
+  .noticeboard .hero { grid-template-rows: auto 330px 280px auto; }
+  .noticeboard h1 { font-size: clamp(56px, 8vw, 72px); }
+  .noticeboard .hero-copy { padding: 26px; }
+  .noticeboard .hero .actions { flex-direction: column; }
+  .noticeboard .hero .button { width: 100%; }
+  .noticeboard-social { width: 92%; height: 160px; align-self: end; }
+  .club-stamp { width: 105px; height: 105px; font-size: 13px; top: 385px; left: 10px; }
+  .noticeboard .service-list { grid-template-columns: 1fr 1fr; }
+  .noticeboard .gallery-grid { grid-template-columns: 1fr 1fr; }
+  .noticeboard .coaching-section { padding: 26px; }
+  .noticeboard .coach-card { padding: 20px; }
+}
+@media (max-width: 620px) {
+  :is(.editorial, .noticeboard) .hero { width: calc(100% - 32px); }
+  :is(.editorial, .noticeboard) .quick-facts { width: calc(100% - 32px); }
+  .editorial .hero { padding: 22px 0 0; }
+  .edition-line { font-size: 9px; padding-bottom: 10px; }
+  .edition-line span:last-child { display: none; }
+  .editorial .hero-copy { grid-template-columns: 1fr; gap: 22px; padding: 16px 0 28px; }
+  .editorial h1 { font-size: clamp(65px, 15.5vw, 100px); }
+  .editorial .hero .intro { font-size: 15px; }
+  .editorial .hero .button { font-size: 12px; padding: 12px; }
+  .editorial .hero-media img { height: 260px; object-position: 57% 65%; }
+  .editorial .hero-media figcaption { font-size: 9px; }
+  .editorial .hero-media figcaption span:last-child { display: none; }
+  .editorial .quick-facts div, .editorial .quick-facts div:first-child { padding: 18px 10px; }
+  .editorial .quick-facts div:nth-child(2) { border-right: 0; }
+  .editorial .quick-facts strong { font-size: 22px; }
+  .editorial .services-section { grid-template-columns: 1fr; gap: 8px; }
+  .editorial .service-list a { padding: 23px 0; gap: 4px 10px; grid-template-columns: 25px 1fr 20px; }
+  .editorial .location-panel { padding-left: 18px; }
+  .editorial .gallery-grid { grid-template-columns: 1fr 1fr; gap: 18px; }
+  .editorial .gallery-grid figure, .editorial .gallery-grid figure:nth-child(2) { grid-column: auto; }
+  .editorial .gallery-grid figure:nth-child(1) { grid-column: 1 / -1; }
+  .editorial .gallery-grid figure:nth-child(-n+2) img { height: auto; }
+  .editorial .fee-grid { gap: 0 20px; }
+  .editorial .fee-card .price { font-size: 40px; }
+  .noticeboard .hero { grid-template-columns: 1fr; grid-template-rows: auto; gap: 20px; padding: 20px 0 30px; }
+  .noticeboard-heading { grid-column: 1; font-size: 10px; }
+  .noticeboard-heading span:last-child { max-width: 135px; text-align: right; }
+  .noticeboard .hero-copy { grid-column: 1; grid-row: 2; padding: 26px; margin-right: 5px; }
+  .noticeboard h1 { font-size: clamp(63px, 18vw, 98px); }
+  .noticeboard .hero .intro { font-size: 15px; }
+  .noticeboard .hero .actions { flex-direction: row; }
+  .noticeboard .hero .button { padding: 12px 10px; flex: 1 1 125px; font-size: 11px; }
+  .noticeboard .hero-media { grid-column: 1; grid-row: 3; height: 275px; margin: 8px 4px 0; }
+  .noticeboard .hero-media img { height: 100%; aspect-ratio: auto; }
+  .noticeboard-social { grid-column: 1; grid-row: 4; width: 73%; height: 175px; margin-right: 8px; }
+  .club-stamp { grid-column: 1; grid-row: 4; position: relative; left: 0; top: 0; width: 98px; height: 98px; margin-top: 15px; }
+  .noticeboard-shortcuts { grid-column: 1; grid-row: 5; grid-template-columns: 1fr; gap: 14px; margin: 0 5px 0 0; }
+  .noticeboard-shortcuts a { display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 16px; }
+  .noticeboard-shortcuts a span { margin: 0; font-size: 9px; max-width: 80px; }
+  .noticeboard-shortcuts a strong { font-size: 17px; }
+  .noticeboard .quick-facts strong { font-size: 21px; }
+  .noticeboard .quick-facts div { padding: 18px 14px; }
+  .noticeboard .quick-facts div:nth-child(2) { border: 0; }
+  .noticeboard .service-list { grid-template-columns: 1fr; gap: 18px; padding-right: 5px; }
+  .noticeboard .service-list span { font-size: 28px; }
+  .noticeboard .coaching-section { padding: 24px 16px; }
+  .noticeboard .junior-panel { padding: 20px; }
+  .noticeboard .fee-grid { grid-template-columns: 1fr 1fr; gap: 16px; padding-right: 4px; }
+  .noticeboard .fee-card { padding: 16px; }
+  .noticeboard .fee-card .price { font-size: 37px; }
+  .noticeboard .gallery-grid { gap: 22px; }
+  .noticeboard .newsletter-simple-card { margin-right: 6px; padding: 24px; }
+  .noticeboard .contact-section { width: calc(100% - 36px); }
+}
+@media print {
+  .noticeboard .hero-media, .noticeboard-social, .noticeboard .gallery-grid figure { transform: none; }
+}
